@@ -1,5 +1,4 @@
-import { Component, Prop } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
@@ -7,26 +6,8 @@ import { format } from '../../utils/utils';
   shadow: true
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
-
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
-  }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return <img srcSet="assets/200/tree-1.jpg 200w, assets/400/tree-1.jpg 400w, assets/800/tree-1.jpg 800w, assets/1200/tree-1.jpg 1200w, " />;
   }
 }
